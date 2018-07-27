@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Календарь Событий</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id="action-header">
+			<div class="container flex justify-c-sb wrap">
+				<div class="relative m-b-2 m-xs-x-1">
+					<button id="quick-event-btn" type="button" class="btn btn-primary m-r-1">Добавить</button><!--
+					--><button type="button" class="btn btn-primary">Обновить</button>
+					<div id="quick-event" class="event-modal top-tail">
+						<span aria-hidden="true" class="close">&times;</span>
+						<input type="text" placeholder="20 июля; Событие; Участники; Описание" class="m-b-1">
+						<button type="button" class="btn btn-modal">Создать</button>
+					</div>
+				</div>
+				<div class="m-b-2 m-xs-b-1">
+					<label for="search-event">&#128269;</label>
+					<input id="search-event" type="text" placeholder="Событие, дата или участник">
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="flex align-i-c m-x-15">
+				<button id="prev-month" type="button" class="btn btn-label">&#9204;</button>
+				<span id="text-date"></span>
+				<button id="next-month" type="button" class="btn btn-label">&#9205;</button>
+				<button id="today-btn" type="button" class="btn btn-label m-l-1">Сегодня</button>
+			</div>
+			<div id="calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>Понедельник</th>
+							<th>Вторник</th>
+							<th>Среда</th>
+							<th>Четверг</th>
+							<th>Пятница</th>
+							<th>Суббота</th>
+							<th>Воскресенье</th>
+						</tr>
+					</thead>
+					<tbody id="calendar-table"></tbody>
+				</table>
+			</div>
+			<div id="full-event" class="event-modal">
+				<span aria-hidden="true" class="close">&times;</span>
+				<div id="event-title" class="hide m-b-2"></div>
+				<input id="event-title-input" type="text" placeholder="Событие" class="m-b-05">
+				<div id="event-date" class="hide m-b-2"></div>
+				<input id="event-date-input" type="text" placeholder="День месяц год" class="m-b-05">
+				<div id="event-participants" class="hide m-b-2"></div>
+				<input id="event-participants-input" type="text" placeholder="Имена участников" class="m-b-35">
+				<div id="event-description" class="hide m-b-2"></div>
+				<textarea id="event-description-input" rows="7" placeholder="Описание"></textarea>
+				<div class="flex m-t-2">
+					<button id="event-save" type="button" class="btn btn-modal m-r-1">Готово</button>
+					<button id="event-delete" type="button" class="btn btn-modal">Удалить</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
